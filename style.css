@@ -1,0 +1,99 @@
+/* reset */
+*, ::before, ::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+}
+
+html {
+    --font-size: 54px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+
+/* style google font */ 
+.container {
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+}
+
+.span_pixel {
+    margin-right: 15px;
+}
+
+input[type="range"] {
+    width: 100%;
+    min-width: 350px;
+    height: 3px;
+    background-color: linear-gradient(90deg, rgba(51, 51, 255, 1) 60%, rgba(51, 51, 200, 0.7) 60%) 
+}
+
+section {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 1.4;
+}
+
+.row {
+    position: relative;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    appearance: none;
+    white-space: nowrap;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.911) 95%, #fff 0%);
+}
+
+.row p {
+    font-size: var(--font-size);
+}
+
+/* small devices */
+@media  screen and (max-width: 768px) {
+     .container {
+        flex-direction: column;
+     }
+
+     .header {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
+     .header h1 {
+         margin-bottom: 20px;
+     }
+}
